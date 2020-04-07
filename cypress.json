@@ -1,0 +1,10 @@
+{
+  "defaultCommandTimeout": 5000,
+  "viewportWidth": 1280,
+  "viewportHeight": 720,
+  "env": {
+    "url": "https://rahulshettyacademy.com/angularpractice/"
+  },
+  "projectId": "396t3e",
+  "reporter": "mochawesome"
+}

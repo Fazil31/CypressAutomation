@@ -1,0 +1,22 @@
+{
+  "name": "cypressautomation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "testAll": "npx cypress run",
+    "test_Headed": "npm run testAll -- --headed",
+    "test_OneSpec": "npm run testAll -- --spec cypress/integration/samples/AngularForm.js --headed",
+    "test_Headed_Chrome" : "npm run test_OneSpec -- --browser chrome",
+    "test_RecordInDashboard" : "npm run test_Headed_Chrome -- --record --key 5354e695-e274-4098-afba-03ee17359af1",
+    "test_Mochawesome" : "npm run test_Headed_Chrome -- --reporter mochawesome",
+    "test_EnvVariable": "npm run test_Headed_Chrome -- --env url=https://rahulshettyacademy.com/angularpractice/"    
+  },
+  "author": "FAH",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^4.3.0",
+    "mocha": "^7.1.1",
+    "mochawesome": "^5.0.0"
+  }
+}
