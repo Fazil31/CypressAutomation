@@ -1,14 +1,14 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 2,
-    "passes": 2,
+    "tests": 1,
+    "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2020-04-05T05:19:30.073Z",
-    "end": "2020-04-05T05:20:01.512Z",
-    "duration": 31439,
-    "testsRegistered": 2,
+    "start": "2020-04-07T14:20:00.946Z",
+    "end": "2020-04-07T14:20:36.668Z",
+    "duration": 35722,
+    "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "4319cce5-7fbe-4e42-9003-72781963c101",
+      "uuid": "47d46ee9-440b-4bdb-a710-3a1f01e7da3e",
       "title": "",
       "fullFile": "cypress\\integration\\samples\\AngularForm.js",
       "file": "cypress\\integration\\samples\\AngularForm.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "09cbc64b-5f22-44a0-8a6c-9259b01dc7eb",
+          "uuid": "6321607f-86cb-4054-92f4-47c9f49a7f3c",
           "title": "Angular Form ",
           "fullFile": "",
           "file": "",
@@ -35,28 +35,10 @@
           "afterHooks": [],
           "tests": [
             {
-              "title": "First Test: Fill Form",
-              "fullTitle": "Angular Form  First Test: Fill Form",
-              "timedOut": null,
-              "duration": 7160,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "cy.visit(Cypress.env('url'));\ncy.get('input[name=\"name\"]:nth-child(2)').type(this.dataz.name);\ncy.get('select#exampleFormControlSelect1').select(this.dataz.gender); // validating an element's attribute's value. for example: minLength attribute of ainput field\ncy.get('input[name=\"name\"]:nth-child(2)').should('have.attr', 'minLength', '2');\ncy.get(':nth-child(4) > .ng-untouched').should('have.value', this.dataz.name); // validating if an element/option is disabled on the screen\ncy.get('#inlineRadio3').should('be.disabled');",
-              "err": {},
-              "uuid": "ab3649d9-8419-4bc0-b2e9-df53a6f31fc5",
-              "parentUUID": "09cbc64b-5f22-44a0-8a6c-9259b01dc7eb",
-              "isHook": false,
-              "skipped": false
-            },
-            {
               "title": "Add to cart",
               "fullTitle": "Angular Form  Add to cart",
               "timedOut": null,
-              "duration": 17119,
+              "duration": 27204,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,21 +47,20 @@
               "context": null,
               "code": "cy.visit(Cypress.env('url'));\ncy.get('li:nth-child(2) > a').click(); // Building custom cypress command\ncy.addToCart('Blackberry'); // ****** cy.pause() to pause the test *******\n// parameterised test using data from JSON file\nthis.dataz.products.forEach(function (product) {\n  cy.addToCart(product); // ****** can use .debug() for debugging ******           \n});\ncy.get('a.nav-link.btn.btn-primary').click();\ncy.get('button.btn.btn-success').click();\ncy.get(\"input#country\").type('India');\nCypress.config('defaultCommandTimeout', 10000); // scope of this timeout is only to this test case\ncy.get('body > app-root > app-shop > div > app-checkout > div > div.suggestions > ul > li > a').click();\ncy.get('input#checkbox2').click({\n  force: true\n});\ncy.get('input.btn.btn-success.btn-lg').click();\ncy.get('.alert').then(function (el) {\n  var actualText = el.text();\n  expect(actualText.includes(\"Success\")).to.be[\"true\"];\n});",
               "err": {},
-              "uuid": "8521d703-05de-4140-9952-bf7415dc52cb",
-              "parentUUID": "09cbc64b-5f22-44a0-8a6c-9259b01dc7eb",
+              "uuid": "21ae18a4-20d4-4656-b99a-528b970604ad",
+              "parentUUID": "6321607f-86cb-4054-92f4-47c9f49a7f3c",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "ab3649d9-8419-4bc0-b2e9-df53a6f31fc5",
-            "8521d703-05de-4140-9952-bf7415dc52cb"
+            "21ae18a4-20d4-4656-b99a-528b970604ad"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 24279,
+          "duration": 27204,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
