@@ -10,7 +10,6 @@ beforeEach(() =>{
     })
 })
 
-
     it('First Test: Fill Form', function() {
         cy.visit(Cypress.env('url'))
         cy.get('input[name="name"]:nth-child(2)').type(this.dataz.name)
@@ -22,7 +21,6 @@ beforeEach(() =>{
 
         // validating if an element/option is disabled on the screen
         cy.get('#inlineRadio3').should('be.disabled')
-
     })
 
 
