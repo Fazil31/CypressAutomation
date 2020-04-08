@@ -10,7 +10,7 @@ beforeEach(() =>{
     })
 })
 
-/*
+
     it('First Test: Fill Form', function() {
         cy.visit(Cypress.env('url'))
         cy.get('input[name="name"]:nth-child(2)').type(this.dataz.name)
@@ -24,7 +24,7 @@ beforeEach(() =>{
         cy.get('#inlineRadio3').should('be.disabled')
 
     })
-*/
+
 
     it('Add to cart', function() {
         cy.visit(Cypress.env('url'))
