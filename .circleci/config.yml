@@ -2,30 +2,33 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: circleci/node:7.10
-
-    working_directory: ~/repo
+      - image: cypress/browsers:node12.6.0-chrome77
 
     steps:
-      - run: echo build step
+      - run:
+          name: echo build
+          command: echo build step
+          working_directory: ''
   
   test:
     docker:
-      -image: circleci/node:7.10
-
-    working_directory: ~/repo
+      -image: cypress/browsers:node12.6.0-chrome77
 
     steps:
-      - run: echo test step
+      - run:
+          name: echo test
+          command: echo test step
+          working_directory: ''
 
   deploy:
     docker:
-      - image: circleci/node:7.10
-
-    working_directory: ~/repo
+      - image: cypress/browsers:node12.6.0-chrome77
 
     steps:
-      - run: echo deploy step
+      - run:
+          name: echo deploy
+          command: echo deploy step
+          working_directory: ''
 
 workflows:
   version: 2.1
