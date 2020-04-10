@@ -9,4 +9,4 @@ workflows:
   build:
     jobs:
       - cypress/run:
-          command: npx cypress run
+          spec: cypress/integration/samples/AngularForm.js
