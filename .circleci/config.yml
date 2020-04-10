@@ -12,6 +12,11 @@ workflows:
           executor: cypress/browsers-chrome77
           spec: cypress/integration/samples/AngularForm.js
           record: false
+          browser: chrome
+          filters: 
+            branches:
+              only:
+                - master
           store_artifacts: true
           post-steps:
             - store_artifacts:
