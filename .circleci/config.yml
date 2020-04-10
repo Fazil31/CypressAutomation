@@ -2,12 +2,12 @@ version: 2.1
 jobs:
   build:
     docker:
-    - image: cypress/browsers:node12.6.0-chrome77
+      - image: cypress/browsers:node12.6.0-chrome77
     parallelism: 1
     environment:
-    - CYPRESS_CACHE_FOLDER: ~/.cache/Cypress
+      - CYPRESS_CACHE_FOLDER: ~/.cache/Cypress
     steps:
-    - run:
+      - run:
         command: echo "Assuming dependencies were installed using cypress/install job"
   
 
@@ -16,6 +16,6 @@ workflows:
   version: 2.1
   build-and-test:
     jobs:
-    - build
+      - build
       
 
