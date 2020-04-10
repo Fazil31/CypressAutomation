@@ -8,5 +8,5 @@ orbs:
 workflows:
   build:
     jobs:
-      - cypress/run: # "run" job comes from "cypress" orb
-          command: npx cypress run --spec cypress/integration/samples/AngularForm.js
+      - cypress/run:
+          command: npx cypress run
