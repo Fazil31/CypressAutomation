@@ -18,6 +18,8 @@ workflows:
               only:
                 - master
                 - test
+              ignore:
+                - circleci-project-setup
           store_artifacts: true
           post-steps:
             - store_artifacts:
