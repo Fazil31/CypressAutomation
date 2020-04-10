@@ -6,8 +6,10 @@ orbs:
   # to lock the version and prevent unexpected CI changes
   cypress: cypress-io/cypress@1.19.1
 workflows:
-  build:
+  build-and-test:
     jobs:
       - cypress/run:
+          executor: cypress/browsers-chrome77
           spec: cypress/integration/samples/AngularForm.js
           record: false
+          store_artifacts: true
