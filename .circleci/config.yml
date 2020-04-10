@@ -21,7 +21,7 @@ jobs:
     steps:
       - run: echo deploy step
 
-Workflows:
+workflows:
   version: 2
   build-and-test:
     jobs:
