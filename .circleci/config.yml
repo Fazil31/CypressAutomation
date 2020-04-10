@@ -13,3 +13,6 @@ workflows:
           spec: cypress/integration/samples/AngularForm.js
           record: false
           store_artifacts: true
+          post-steps:
+            - store_artifacts:
+                path: mochawesome-report
