@@ -17,7 +17,7 @@ workflows:
             branches:
               only:
                 - master
-                - circleci-project-setup
+                - test
           store_artifacts: true
           post-steps:
             - store_artifacts:
