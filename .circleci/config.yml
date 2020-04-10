@@ -10,3 +10,4 @@ workflows:
     jobs:
       - cypress/run:
           spec: cypress/integration/samples/AngularForm.js
+          record: true
